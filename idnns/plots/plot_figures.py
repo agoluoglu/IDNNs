@@ -1,6 +1,7 @@
 """Plot the networks in the information plane"""
 import matplotlib
-matplotlib.use("TkAgg")
+# matplotlib.use("TkAgg")
+matplotlib.use("Agg")
 import numpy as np
 import _pickle as cPickle
 # import cPickle
