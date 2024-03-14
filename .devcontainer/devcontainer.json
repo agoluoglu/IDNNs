@@ -8,7 +8,7 @@
 	"runArgs": [
 		"--rm",
 		"--privileged",
-		"--gpus", "all",
+		//"--gpus", "all",
 		"--shm-size=1g",
 		"--ipc=host",
 		"--ulimit=stack=67108864",

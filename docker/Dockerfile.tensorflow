@@ -1,4 +1,6 @@
-FROM nvcr.io/nvidia/tensorflow:23.07-tf2-py3
+#FROM nvcr.io/nvidia/tensorflow:23.07-tf2-py3
+FROM tensorflow/tensorflow:2.15.0
+# use the cpu image that the nvidia image was based on
 
 # specify vscode as the user name in the docker
 # This user name should match that of the VS Code .devcontainer to allow seamless development inside the docker container via vscode 
@@ -23,11 +25,11 @@ RUN groupadd --gid $USER_GID $USERNAME \
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends curl git-lfs ffmpeg libsm6 libxext6 graphviz libsndfile1-dev libgraphviz-dev xdg-utils swig gringo gobject-introspection libcairo2-dev libgirepository1.0-dev pkg-config python3-dev python3-gi python3-tk
 
-COPY docker/docker-font.conf /etc/fonts/local.conf
+#COPY docker/docker-font.conf /etc/fonts/local.conf
 #ENV FREETYPE_PROPERTIES="truetype:interpreter-version=35"
-RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends fontconfig ttf-mscorefonts-installer
+#RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
+#RUN apt-get update \
+	#&& apt-get install -y --no-install-recommends fontconfig ttf-mscorefonts-installer
 
 
 USER vscode
