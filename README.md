@@ -10,7 +10,7 @@ This repository is forked from the original to make it run on my computer (M1 Ma
 - In Docker Desktop, in General Settings enabled "Use Rosetta for x86_64/amd64 emulation on Apple Silicon"
 
 ## Usage
-- You must have Docker installed beforehand
+- You must have Docker installed beforehand. Make sure to go to Docker Desktop, navigate to General Settings, and enable "Use Rosetta for x86_64/amd64 emulation on Apple Silicon". This  might bring up a prompt that says you need a system update that then freezes when trying to find the update. I ignored the frozen window, and Rosetta was still enabled for me, hopefully it will work for you too! 
 - Open the project in VSCode
 - Make sure the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension is installed (VSCode should automatically prompt you to install when it notices the devcontainer files). 
 - VSCode should automatically prompt you to "Reopen in Container" with a popup on the bottom right. You can also do this by finding the bottom left corner of the VSCode window with these symbols: ><. Click and select "Reopen in Container".
